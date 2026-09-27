@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengeluaran Mahasiswa - Tambah Pengeluaran</title>
+</head>
+
+<body>
+
+    <header>
+        <img 
+            src="assets/images/logo.svg" 
+            alt="Logo Aplikasi Manajemen Pengeluaran Mahasiswa"
+            width="80"
+        >
+
+        <h1>Manajemen Pengeluaran Mahasiswa</h1>
+
+        <p>
+            Catat pengeluaran baru untuk membantu mengelola
+            keuangan sehari-hari.
+        </p>
+    </header>
+
+    <nav aria-label="Navigasi utama">
+        <ul>
+            <li>
+                <a href="index.html">Daftar Pengeluaran</a>
+            </li>
+
+            <li>
+                <a href="tambah.html">Tambah Pengeluaran</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <article>
+
+            <header>
+                <h2>Tambah Pengeluaran</h2>
+
+                <p>
+                    Isi formulir berikut untuk mencatat pengeluaran baru.
+                </p>
+            </header>
+
+            <form action="#" method="post">
+
+                <fieldset>
+
+                    <legend>Informasi Pengeluaran</legend>
+
+                    <p>
+                        <label for="tanggal">
+                            Tanggal Pengeluaran
+                        </label>
+                        <br>
+
+                        <input
+                            type="date"
+                            id="tanggal"
+                            name="tanggal"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="kategori">
+                            Kategori Pengeluaran
+                        </label>
+                        <br>
+
+                        <select
+                            id="kategori"
+                            name="kategori"
+                            required
+                        >
+                            <option value="">
+                                -- Pilih Kategori --
+                            </option>
+
+                            <option value="makanan">
+                                Makanan
+                            </option>
+
+                            <option value="transportasi">
+                                Transportasi
+                            </option>
+
+                            <option value="internet">
+                                Internet
+                            </option>
+
+                            <option value="kebutuhan-kuliah">
+                                Kebutuhan Kuliah
+                            </option>
+
+                            <option value="hiburan">
+                                Hiburan
+                            </option>
+
+                            <option value="lainnya">
+                                Lainnya
+                            </option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="keterangan">
+                            Keterangan
+                        </label>
+                        <br>
+
+                        <input
+                            type="text"
+                            id="keterangan"
+                            name="keterangan"
+                            placeholder="Contoh: Makan siang"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="jumlah">
+                            Jumlah Pengeluaran (Rp)
+                        </label>
+                        <br>
+
+                        <input
+                            type="number"
+                            id="jumlah"
+                            name="jumlah"
+                            min="0"
+                            placeholder="Contoh: 25000"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="catatan">
+                            Catatan Tambahan
+                        </label>
+                        <br>
+
+                        <textarea
+                            id="catatan"
+                            name="catatan"
+                            rows="5"
+                            cols="40"
+                            placeholder="Tambahkan catatan jika diperlukan..."
+                        ></textarea>
+                    </p>
+
+                </fieldset>
+
+                <p>
+                    <button type="submit">
+                        Simpan Pengeluaran
+                    </button>
+
+                    <button type="reset">
+                        Reset
+                    </button>
+                </p>
+
+            </form>
+
+            <p>
+                <a href="index.html">
+                    Kembali ke Daftar Pengeluaran
+                </a>
+            </p>
+
+        </article>
+
+    </main>
+
+    <footer>
+        <p>
+            Project Perkuliahan Yusak Rekayasa Perangkat Lunak -
+            S1 Telkom University
+        </p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengeluaran Mahasiswa - Daftar Pengeluaran</title>
+</head>
+
+<body>
+
+    <header>
+        <img 
+            src="assets/images/logo.svg" 
+            alt="Logo Aplikasi Manajemen Pengeluaran Mahasiswa"
+            width="80"
+        >
+
+        <h1>Manajemen Pengeluaran Mahasiswa</h1>
+
+        <p>
+            Aplikasi sederhana untuk mencatat dan mengelola
+            pengeluaran sehari-hari mahasiswa.
+        </p>
+    </header>
+
+    <nav aria-label="Navigasi utama">
+        <ul>
+            <li>
+                <a href="index.html">Daftar Pengeluaran</a>
+            </li>
+            <li>
+                <a href="tambah.html">Tambah Pengeluaran</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <article>
+            <header>
+                <h2>Daftar Pengeluaran</h2>
+
+                <p>
+                    Berikut adalah daftar pengeluaran yang telah dicatat.
+                </p>
+            </header>
+
+            <p>
+                <a href="tambah.html">+ Tambah Pengeluaran Baru</a>
+            </p>
+
+            <table border="1">
+                <caption>
+                    Data Pengeluaran Mahasiswa
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Tanggal</th>
+                        <th scope="col">Kategori</th>
+                        <th scope="col">Keterangan</th>
+                        <th scope="col">Jumlah</th>
+                        <th scope="col">Aksi</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>27 September 2026</td>
+                        <td>Makanan</td>
+                        <td>Makan siang setelah kuliah</td>
+                        <td>Rp25.000</td>
+                        <td>
+                            <a href="detail.html">Lihat Detail</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>27 September 2026</td>
+                        <td>Transportasi</td>
+                        <td>Transportasi ke kampus</td>
+                        <td>Rp15.000</td>
+                        <td>
+                            <a href="detail.html">Lihat Detail</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>26 September 2026</td>
+                        <td>Kebutuhan Kuliah</td>
+                        <td>Fotokopi materi perkuliahan</td>
+                        <td>Rp10.000</td>
+                        <td>
+                            <a href="detail.html">Lihat Detail</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>26 September 2026</td>
+                        <td>Internet</td>
+                        <td>Pembelian paket internet</td>
+                        <td>Rp35.000</td>
+                        <td>
+                            <a href="detail.html">Lihat Detail</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>25 September 2026</td>
+                        <td>Hiburan</td>
+                        <td>Nonton bersama teman</td>
+                        <td>Rp30.000</td>
+                        <td>
+                            <a href="detail.html">Lihat Detail</a>
+                        </td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <th colspan="4" scope="row">Total Pengeluaran</th>
+                        <td colspan="2">Rp115.000</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>
+            Project Perkuliahan Yusak Rekayasa Perangkat Lunak -
+            S1 Telkom University
+        </p>
+    </footer>
+
+</body>
+</html>
