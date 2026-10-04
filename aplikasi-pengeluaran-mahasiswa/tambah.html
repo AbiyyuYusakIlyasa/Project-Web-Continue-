@@ -4,48 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pengeluaran Mahasiswa - Tambah Pengeluaran</title>
+
+     <!-- Menyertakan file CSS eksternal -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header>
-        <img 
-            src="assets/images/logo.svg" 
-            alt="Logo Aplikasi Manajemen Pengeluaran Mahasiswa"
-            width="80"
-        >
+    <header class="site-header">
 
-        <h1>Manajemen Pengeluaran Mahasiswa</h1>
+        <div class="header-content">
 
-        <p>
-            Catat pengeluaran baru untuk membantu mengelola
-            keuangan sehari-hari.
-        </p>
-    </header>
+            <img
+                src="assets/images/logo.svg"
+                alt="Logo KantongKu"
+                class="logo"
+            >
 
-    <nav aria-label="Navigasi utama">
-        <ul>
-            <li>
-                <a href="index.html">Daftar Pengeluaran</a>
-            </li>
-
-            <li>
-                <a href="tambah.html">Tambah Pengeluaran</a>
-            </li>
-        </ul>
-    </nav>
-
-    <main>
-
-        <article>
-
-            <header>
-                <h2>Tambah Pengeluaran</h2>
+            <div class="header-text">
+                <h1>KantongKu</h1>
 
                 <p>
-                    Isi formulir berikut untuk mencatat pengeluaran baru.
+                    Manajemen Pengeluaran Mahasiswa
                 </p>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <nav class="main-nav" aria-label="Navigasi utama">
+
+        <div class="nav-container">
+
+            <ul>
+                <li>
+                    <a href="index.html">
+                        Daftar Pengeluaran
+                    </a>
+                </li>
+
+                <li>
+                    <a href="tambah.html" class="active">
+                        Tambah Pengeluaran
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <main class="container">
+
+        <article class="card form-card">
+
+            <header class="page-header">
+
+                <div>
+                    <span class="page-label">PENCATATAN</span>
+
+                    <h2>Tambah Pengeluaran</h2>
+
+                    <p>
+                        Catat pengeluaran baru untuk membantu
+                        mengontrol keuanganmu.
+                    </p>
+                </div>
+
             </header>
+
 
             <form action="#" method="post">
 
@@ -53,11 +83,12 @@
 
                     <legend>Informasi Pengeluaran</legend>
 
-                    <p>
+
+                    <div class="form-group">
+
                         <label for="tanggal">
                             Tanggal Pengeluaran
                         </label>
-                        <br>
 
                         <input
                             type="date"
@@ -65,19 +96,22 @@
                             name="tanggal"
                             required
                         >
-                    </p>
 
-                    <p>
+                    </div>
+
+
+                    <div class="form-group">
+
                         <label for="kategori">
                             Kategori Pengeluaran
                         </label>
-                        <br>
 
                         <select
                             id="kategori"
                             name="kategori"
                             required
                         >
+
                             <option value="">
                                 -- Pilih Kategori --
                             </option>
@@ -105,14 +139,17 @@
                             <option value="lainnya">
                                 Lainnya
                             </option>
-                        </select>
-                    </p>
 
-                    <p>
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
                         <label for="keterangan">
                             Keterangan
                         </label>
-                        <br>
 
                         <input
                             type="text"
@@ -121,13 +158,15 @@
                             placeholder="Contoh: Makan siang"
                             required
                         >
-                    </p>
 
-                    <p>
+                    </div>
+
+
+                    <div class="form-group">
+
                         <label for="jumlah">
                             Jumlah Pengeluaran (Rp)
                         </label>
-                        <br>
 
                         <input
                             type="number"
@@ -137,52 +176,69 @@
                             placeholder="Contoh: 25000"
                             required
                         >
-                    </p>
 
-                    <p>
+                    </div>
+
+
+                    <div class="form-group">
+
                         <label for="catatan">
                             Catatan Tambahan
                         </label>
-                        <br>
 
                         <textarea
                             id="catatan"
                             name="catatan"
                             rows="5"
-                            cols="40"
                             placeholder="Tambahkan catatan jika diperlukan..."
                         ></textarea>
-                    </p>
+
+                    </div>
 
                 </fieldset>
 
-                <p>
-                    <button type="submit">
+
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        class="button"
+                    >
                         Simpan Pengeluaran
                     </button>
 
-                    <button type="reset">
+                    <button
+                        type="reset"
+                        class="button button-secondary"
+                    >
                         Reset
                     </button>
-                </p>
+
+                </div>
 
             </form>
 
-            <p>
-                <a href="index.html">
-                    Kembali ke Daftar Pengeluaran
-                </a>
-            </p>
+
+            <a href="index.html" class="back-link">
+                ← Kembali ke Daftar Pengeluaran
+            </a>
 
         </article>
 
     </main>
 
-    <footer>
+
+    <footer class="site-footer">
+
         <p>
-            Project Perkuliahan Yusak Rekayasa Perangkat Lunak -
+            &copy; 2026 <strong>KantongKu</strong>
+        </p>
+
+        <p>
+            Project Perkuliahan Rekayasa Perangkat Lunak -
             S1 Telkom University
         </p>
+
     </footer>
 
 </body>

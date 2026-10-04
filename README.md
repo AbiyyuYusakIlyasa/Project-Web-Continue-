@@ -59,3 +59,61 @@ aplikasi-manajemen-pengeluaran-mahasiswa/
 │       └── halaman-detail.png
 │
 └── README.md
+
+
+## Bab 3 - CSS
+
+Pada tahap Bab 3, project dikembangkan menggunakan CSS native
+untuk meningkatkan tampilan dan pengalaman pengguna.
+
+### Penerapan CSS
+
+Beberapa penerapan CSS yang digunakan:
+
+- Font family, font size, dan font weight
+- Styling navigasi
+- Styling list
+- Text alignment
+- Warna background dan teks
+- Styling tabel
+- Styling form
+- Styling button
+- Styling kategori pengeluaran
+- Responsive design menggunakan `@media`
+
+### Responsive Design
+
+Responsive design diterapkan menggunakan media query pada ukuran
+layar maksimal 768px.
+
+Pada tampilan desktop, navigasi ditampilkan secara horizontal.
+Pada tampilan mobile, navigasi berubah menjadi vertikal agar
+lebih mudah digunakan pada layar kecil.
+
+### Screenshot Desktop
+
+#### Halaman Utama
+
+![Desktop Home](docs/screenshots/desktop-home.png)
+
+#### Halaman Tambah
+
+![Desktop Tambah](docs/screenshots/desktop-tambah.png)
+
+#### Halaman Detail
+
+![Desktop Detail](docs/screenshots/desktop-detail.png)
+
+### Screenshot Mobile
+
+#### Halaman Utama
+
+![Mobile Home](docs/screenshots/mobile-home.png)
+
+#### Halaman Tambah
+
+![Mobile Tambah](docs/screenshots/mobile-tambah.png)
+
+#### Halaman Detail
+
+![Mobile Detail](docs/screenshots/mobile-detail.png)

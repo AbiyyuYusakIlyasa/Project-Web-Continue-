@@ -4,140 +4,232 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pengeluaran Mahasiswa - Daftar Pengeluaran</title>
+
+    <!-- Menyertakan file CSS eksternal -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header>
-        <img 
-            src="assets/images/logo.svg" 
-            alt="Logo Aplikasi Manajemen Pengeluaran Mahasiswa"
-            width="80"
-        >
+    <header class="site-header">
 
-        <h1>Manajemen Pengeluaran Mahasiswa</h1>
+        <div class="header-content">
 
-        <p>
-            Aplikasi sederhana untuk mencatat dan mengelola
-            pengeluaran sehari-hari mahasiswa.
-        </p>
-    </header>
+            <img
+                src="assets/images/logo.svg"
+                alt="Logo KantongKu"
+                class="logo"
+            >
 
-    <nav aria-label="Navigasi utama">
-        <ul>
-            <li>
-                <a href="index.html">Daftar Pengeluaran</a>
-            </li>
-            <li>
-                <a href="tambah.html">Tambah Pengeluaran</a>
-            </li>
-        </ul>
-    </nav>
-
-    <main>
-
-        <article>
-            <header>
-                <h2>Daftar Pengeluaran</h2>
+            <div class="header-text">
+                <h1>KantongKu</h1>
 
                 <p>
-                    Berikut adalah daftar pengeluaran yang telah dicatat.
+                    Manajemen Pengeluaran Mahasiswa
                 </p>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <nav class="main-nav" aria-label="Navigasi utama">
+
+        <div class="nav-container">
+
+            <ul>
+                <li>
+                    <a href="index.html" class="active">
+                        Daftar Pengeluaran
+                    </a>
+                </li>
+
+                <li>
+                    <a href="tambah.html">
+                        Tambah Pengeluaran
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <main class="container">
+
+        <article class="card">
+
+            <header class="page-header">
+
+                <div>
+                    <span class="page-label">KEUANGAN</span>
+
+                    <h2>Daftar Pengeluaran</h2>
+
+                    <p>
+                        Kelola dan pantau pengeluaran harian kamu
+                        dengan lebih mudah.
+                    </p>
+                </div>
+
+                <a href="tambah.html" class="button">
+                    + Tambah Pengeluaran
+                </a>
+
             </header>
 
-            <p>
-                <a href="tambah.html">+ Tambah Pengeluaran Baru</a>
-            </p>
 
-            <table border="1">
-                <caption>
-                    Data Pengeluaran Mahasiswa
-                </caption>
+            <div class="table-wrapper">
 
-                <thead>
-                    <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Tanggal</th>
-                        <th scope="col">Kategori</th>
-                        <th scope="col">Keterangan</th>
-                        <th scope="col">Jumlah</th>
-                        <th scope="col">Aksi</th>
-                    </tr>
-                </thead>
+                <table>
 
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>27 September 2026</td>
-                        <td>Makanan</td>
-                        <td>Makan siang setelah kuliah</td>
-                        <td>Rp25.000</td>
-                        <td>
-                            <a href="detail.html">Lihat Detail</a>
-                        </td>
-                    </tr>
+                    <caption>
+                        Data Pengeluaran Mahasiswa
+                    </caption>
 
-                    <tr>
-                        <td>2</td>
-                        <td>27 September 2026</td>
-                        <td>Transportasi</td>
-                        <td>Transportasi ke kampus</td>
-                        <td>Rp15.000</td>
-                        <td>
-                            <a href="detail.html">Lihat Detail</a>
-                        </td>
-                    </tr>
+                    <thead>
 
-                    <tr>
-                        <td>3</td>
-                        <td>26 September 2026</td>
-                        <td>Kebutuhan Kuliah</td>
-                        <td>Fotokopi materi perkuliahan</td>
-                        <td>Rp10.000</td>
-                        <td>
-                            <a href="detail.html">Lihat Detail</a>
-                        </td>
-                    </tr>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Tanggal</th>
+                            <th scope="col">Kategori</th>
+                            <th scope="col">Keterangan</th>
+                            <th scope="col">Jumlah</th>
+                            <th scope="col">Aksi</th>
+                        </tr>
 
-                    <tr>
-                        <td>4</td>
-                        <td>26 September 2026</td>
-                        <td>Internet</td>
-                        <td>Pembelian paket internet</td>
-                        <td>Rp35.000</td>
-                        <td>
-                            <a href="detail.html">Lihat Detail</a>
-                        </td>
-                    </tr>
+                    </thead>
 
-                    <tr>
-                        <td>5</td>
-                        <td>25 September 2026</td>
-                        <td>Hiburan</td>
-                        <td>Nonton bersama teman</td>
-                        <td>Rp30.000</td>
-                        <td>
-                            <a href="detail.html">Lihat Detail</a>
-                        </td>
-                    </tr>
-                </tbody>
+                    <tbody>
 
-                <tfoot>
-                    <tr>
-                        <th colspan="4" scope="row">Total Pengeluaran</th>
-                        <td colspan="2">Rp115.000</td>
-                    </tr>
-                </tfoot>
-            </table>
+                        <tr>
+                            <td>1</td>
+                            <td>27 September 2026</td>
+                            <td>
+                                <span class="category food">
+                                    Makanan
+                                </span>
+                            </td>
+                            <td>Makan siang setelah kuliah</td>
+                            <td class="amount">Rp25.000</td>
+                            <td>
+                                <a href="detail.html" class="detail-link">
+                                    Detail
+                                </a>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>2</td>
+                            <td>27 September 2026</td>
+                            <td>
+                                <span class="category transport">
+                                    Transportasi
+                                </span>
+                            </td>
+                            <td>Transportasi ke kampus</td>
+                            <td class="amount">Rp15.000</td>
+                            <td>
+                                <a href="detail.html" class="detail-link">
+                                    Detail
+                                </a>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>3</td>
+                            <td>26 September 2026</td>
+                            <td>
+                                <span class="category study">
+                                    Kebutuhan Kuliah
+                                </span>
+                            </td>
+                            <td>Fotokopi materi perkuliahan</td>
+                            <td class="amount">Rp10.000</td>
+                            <td>
+                                <a href="detail.html" class="detail-link">
+                                    Detail
+                                </a>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>4</td>
+                            <td>26 September 2026</td>
+                            <td>
+                                <span class="category internet">
+                                    Internet
+                                </span>
+                            </td>
+                            <td>Pembelian paket internet</td>
+                            <td class="amount">Rp35.000</td>
+                            <td>
+                                <a href="detail.html" class="detail-link">
+                                    Detail
+                                </a>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>5</td>
+                            <td>25 September 2026</td>
+                            <td>
+                                <span class="category entertainment">
+                                    Hiburan
+                                </span>
+                            </td>
+                            <td>Nonton bersama teman</td>
+                            <td class="amount">Rp30.000</td>
+                            <td>
+                                <a href="detail.html" class="detail-link">
+                                    Detail
+                                </a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+
+                    <tfoot>
+
+                        <tr>
+                            <th colspan="4" scope="row">
+                                Total Pengeluaran
+                            </th>
+
+                            <td colspan="2" class="total">
+                                Rp115.000
+                            </td>
+                        </tr>
+
+                    </tfoot>
+
+                </table>
+
+            </div>
+
         </article>
 
     </main>
 
-    <footer>
+
+    <footer class="site-footer">
+
         <p>
-            Project Perkuliahan Yusak Rekayasa Perangkat Lunak -
+            &copy; 2026 <strong>KantongKu</strong>
+        </p>
+
+        <p>
+            Project Perkuliahan Rekayasa Perangkat Lunak -
             S1 Telkom University
         </p>
+
     </footer>
 
 </body>

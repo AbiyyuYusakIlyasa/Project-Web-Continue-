@@ -4,105 +4,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pengeluaran Mahasiswa - Detail Pengeluaran</title>
+
+     <!-- Menyertakan file CSS eksternal -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header>
-        <img 
-            src="assets/images/logo.svg" 
-            alt="Logo Aplikasi Manajemen Pengeluaran Mahasiswa"
-            width="80"
-        >
+    <header class="site-header">
 
-        <h1>Manajemen Pengeluaran Mahasiswa</h1>
+        <div class="header-content">
 
-        <p>
-            Informasi lengkap mengenai pengeluaran yang telah dicatat.
-        </p>
-    </header>
+            <img
+                src="assets/images/logo.svg"
+                alt="Logo KantongKu"
+                class="logo"
+            >
 
-    <nav aria-label="Navigasi utama">
-        <ul>
-            <li>
-                <a href="index.html">Daftar Pengeluaran</a>
-            </li>
-
-            <li>
-                <a href="tambah.html">Tambah Pengeluaran</a>
-            </li>
-        </ul>
-    </nav>
-
-    <main>
-
-        <article>
-
-            <header>
-                <h2>Detail Pengeluaran</h2>
+            <div class="header-text">
+                <h1>KantongKu</h1>
 
                 <p>
-                    Informasi lengkap mengenai data pengeluaran.
+                    Manajemen Pengeluaran Mahasiswa
                 </p>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <nav class="main-nav" aria-label="Navigasi utama">
+
+        <div class="nav-container">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Daftar Pengeluaran
+                    </a>
+                </li>
+
+                <li>
+                    <a href="tambah.html">
+                        Tambah Pengeluaran
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <main class="container">
+
+        <article class="card">
+
+            <header class="page-header">
+
+                <div>
+
+                    <span class="page-label">
+                        DETAIL
+                    </span>
+
+                    <h2>Detail Pengeluaran</h2>
+
+                    <p>
+                        Informasi lengkap mengenai pengeluaran
+                        yang telah dicatat.
+                    </p>
+
+                </div>
+
             </header>
 
-            <section>
+
+            <section class="detail-section">
 
                 <h3>Informasi Pengeluaran</h3>
 
-                <dl>
+                <dl class="detail-list">
 
-                    <dt>ID Pengeluaran</dt>
-                    <dd>001</dd>
+                    <div>
+                        <dt>ID Pengeluaran</dt>
+                        <dd>001</dd>
+                    </div>
 
-                    <dt>Tanggal</dt>
-                    <dd>27 September 2026</dd>
+                    <div>
+                        <dt>Tanggal</dt>
+                        <dd>27 September 2026</dd>
+                    </div>
 
-                    <dt>Kategori</dt>
-                    <dd>Makanan</dd>
+                    <div>
+                        <dt>Kategori</dt>
+                        <dd>
+                            <span class="category food">
+                                Makanan
+                            </span>
+                        </dd>
+                    </div>
 
-                    <dt>Keterangan</dt>
-                    <dd>Makan siang setelah kuliah</dd>
+                    <div>
+                        <dt>Keterangan</dt>
+                        <dd>Makan siang setelah kuliah</dd>
+                    </div>
 
-                    <dt>Jumlah</dt>
-                    <dd>Rp25.000</dd>
+                    <div>
+                        <dt>Jumlah</dt>
+                        <dd class="detail-amount">
+                            Rp25.000
+                        </dd>
+                    </div>
 
-                    <dt>Catatan</dt>
-                    <dd>
-                        Pengeluaran untuk makan siang
-                        setelah mengikuti perkuliahan.
-                    </dd>
+                    <div>
+                        <dt>Catatan</dt>
+                        <dd>
+                            Pengeluaran untuk makan siang
+                            setelah mengikuti perkuliahan.
+                        </dd>
+                    </div>
 
                 </dl>
 
             </section>
 
-            <section>
+
+            <section class="summary">
 
                 <h3>Ringkasan</h3>
 
                 <p>
-                    Pengeluaran sebesar <strong>Rp25.000</strong>
+                    Pengeluaran sebesar
+                    <strong>Rp25.000</strong>
                     digunakan untuk kategori makanan.
                 </p>
 
             </section>
 
-            <section>
+
+            <section class="detail-actions">
 
                 <h3>Aksi</h3>
 
-                <p>
-                    <a href="index.html">
-                        Kembali ke Daftar
-                    </a>
-                </p>
+                <a href="index.html" class="button">
+                    ← Kembali ke Daftar
+                </a>
 
-                <p>
-                    <a href="tambah.html">
-                        Tambah Pengeluaran Baru
-                    </a>
-                </p>
+                <a href="tambah.html" class="button button-secondary">
+                    + Tambah Pengeluaran
+                </a>
 
             </section>
 
@@ -110,11 +164,18 @@
 
     </main>
 
-    <footer>
+
+    <footer class="site-footer">
+
         <p>
-            Project Perkuliahan Yusak Rekayasa Perangkat Lunak -
+            &copy; 2026 <strong>KantongKu</strong>
+        </p>
+
+        <p>
+            Project Perkuliahan Rekayasa Perangkat Lunak -
             S1 Telkom University
         </p>
+
     </footer>
 
 </body>
