@@ -94,26 +94,17 @@ lebih mudah digunakan pada layar kecil.
 
 #### Halaman Utama
 
-![Desktop Home](docs/screenshots/desktop-home.png)
+![alt text](image.png)
 
 #### Halaman Tambah
 
-![Desktop Tambah](docs/screenshots/desktop-tambah.png)
+![alt text](tambah.png)
 
 #### Halaman Detail
 
-![Desktop Detail](docs/screenshots/desktop-detail.png)
+![alt text](detail.png)
 
 ### Screenshot Mobile
 
-#### Halaman Utama
+![alt text](mobile.png)
 
-![Mobile Home](docs/screenshots/mobile-home.png)
-
-#### Halaman Tambah
-
-![Mobile Tambah](docs/screenshots/mobile-tambah.png)
-
-#### Halaman Detail
-
-![Mobile Detail](docs/screenshots/mobile-detail.png)
