@@ -1,110 +1,63 @@
 
-import { useState } from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import Dashboard from './pages/Dashboard';
-import DaftarPengeluaran from './pages/DaftarPengeluaran';
-import FormPengeluaran from './pages/FormPengeluaran';
-
-const dataAwal = [
-  {
-    id: 1,
-    nama: 'Makan siang',
-    kategori: 'Makanan',
-    tanggal: '2026-10-25',
-    jumlah: 15000,
-  },
-  {
-    id: 2,
-    nama: 'Ongkos transportasi',
-    kategori: 'Transportasi',
-    tanggal: '2026-10-25',
-    jumlah: 10000,
-  },
-  {
-    id: 3,
-    nama: 'Kopi',
-    kategori: 'Jajan',
-    tanggal: '2026-10-24',
-    jumlah: 12000,
-  },
-];
-
-function Navbar() {
-  return (
-    <nav className="navbar navbar-expand-lg navbar-dark navbar-custom">
-      <div className="container">
-        <Link className="navbar-brand fw-bold" to="/">
-          KantongKu
-        </Link>
-
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#menuNavbar"
-          aria-controls="menuNavbar"
-          aria-expanded="false"
-          aria-label="Buka navigasi"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        <div className="collapse navbar-collapse" id="menuNavbar">
-          <div className="navbar-nav ms-auto">
-            <Link className="nav-link" to="/">Dashboard</Link>
-            <Link className="nav-link" to="/pengeluaran">Daftar Pengeluaran</Link>
-            <Link className="nav-link" to="/tambah">Tambah Pengeluaran</Link>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-}
+import { useState } from "react";
+import Header from "./components/Header";
+import Ringkasan from "./components/Ringkasan";
+import FormPengeluaran from "./components/FormPengeluaran";
+import DaftarPengeluaran from "./components/DaftarPengeluaran";
 
 function App() {
-  const [pengeluaran, setPengeluaran] = useState(dataAwal);
+  const [pengeluaran, setPengeluaran] = useState([
+    {
+      id: 1,
+      nama: "Makan siang",
+      kategori: "Makanan",
+      nominal: 15000,
+    },
+    {
+      id: 2,
+      nama: "Ongkos kuliah",
+      kategori: "Transportasi",
+      nominal: 10000,
+    },
+    {
+      id: 3,
+      nama: "Fotokopi materi",
+      kategori: "Kuliah",
+      nominal: 5000,
+    },
+  ]);
 
-  function tambahPengeluaran(data) {
-    setPengeluaran((sebelumnya) => [
-      ...sebelumnya,
-      { ...data, id: Date.now() },
+  function tambahData(dataBaru) {
+    setPengeluaran((dataSebelumnya) => [
+      ...dataSebelumnya,
+      dataBaru,
     ]);
   }
 
-  function hapusPengeluaran(id) {
-    setPengeluaran((sebelumnya) =>
-      sebelumnya.filter((item) => item.id !== id)
+  function hapusData(id) {
+    setPengeluaran((dataSebelumnya) =>
+      dataSebelumnya.filter((item) => item.id !== id)
     );
   }
 
   return (
-    <BrowserRouter>
-      <Navbar />
+    <>
+      <Header />
 
-      <Routes>
-        <Route
-          path="/"
-          element={<Dashboard pengeluaran={pengeluaran} />}
+      <main className="container py-4">
+        <h3>Dashboard Pengeluaran</h3>
+        <p>Catat dan pantau pengeluaran harian mahasiswa.</p>
+
+        <Ringkasan data={pengeluaran} />
+
+        <FormPengeluaran tambahData={tambahData} />
+
+        <DaftarPengeluaran
+          data={pengeluaran}
+          hapusData={hapusData}
         />
-        <Route
-          path="/pengeluaran"
-          element={
-            <DaftarPengeluaran
-              pengeluaran={pengeluaran}
-              hapusPengeluaran={hapusPengeluaran}
-            />
-          }
-        />
-        <Route
-          path="/tambah"
-          element={
-            <FormPengeluaran
-              tambahPengeluaran={tambahPengeluaran}
-            />
-          }
-        />
-      </Routes>
-    </BrowserRouter>
+      </main>
+    </>
   );
 }
 
