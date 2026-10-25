@@ -1,0 +1,44 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333333;
+  background-color: #f4f6f9;
+}
+
+.app-background {
+  background-color: #f4f6f9;
+}
+
+.navbar-custom {
+  background-color: #28527a;
+}
+
+.summary-card {
+  border-left: 4px solid #28527a;
+}
+
+.card {
+  border: 1px solid #e1e5ea;
+  border-radius: 8px;
+}
+
+.card-header {
+  border-bottom: 1px solid #e1e5ea;
+}
+
+.form-control,
+.form-select {
+  padding: 10px;
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  main.container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
