@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Ringkasan from "./components/Ringkasan";
 import FormPengeluaran from "./components/FormPengeluaran";
 import DaftarPengeluaran from "./components/DaftarPengeluaran";
+import TipsHemat from "./components/TipsHemat";
 
 function App() {
   const [pengeluaran, setPengeluaran] = useState([
@@ -49,7 +50,7 @@ function App() {
         <p>Catat dan pantau pengeluaran harian mahasiswa.</p>
 
         <Ringkasan data={pengeluaran} />
-
+        <TipsHemat />
         <FormPengeluaran tambahData={tambahData} />
 
         <DaftarPengeluaran
