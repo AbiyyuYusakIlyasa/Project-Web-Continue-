@@ -1,110 +1,167 @@
-# Aplikasi Manajemen Pengeluaran Mahasiswa
+# KantongKu — Aplikasi Manajemen Pengeluaran Mahasiswa
 
 ## Deskripsi
 
-Aplikasi Manajemen Pengeluaran Mahasiswa merupakan aplikasi yang dirancang
-untuk membantu mahasiswa mencatat dan mengelola pengeluaran sehari-hari.
+KantongKu merupakan aplikasi berbasis web yang dirancang untuk membantu mahasiswa mencatat, mengelola, dan memantau pengeluaran sehari-hari.
 
-Aplikasi ini dikembangkan secara bertahap sebagai proyek perkuliahan
-Rekayasa Perangkat Lunak S1 Telkom University.
+Aplikasi ini dikembangkan secara bertahap sebagai proyek perkuliahan Rekayasa Perangkat Lunak di Telkom University.
 
-Pada tahap awal ini, aplikasi dibuat menggunakan HTML murni tanpa menggunakan
-CSS maupun framework.
+## Teknologi yang Digunakan
 
-## Studi Kasus
+### Frontend
 
-Studi kasus yang digunakan adalah manajemen pengeluaran mahasiswa.
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- React
+- Vite
 
-Pengguna dapat mencatat berbagai jenis pengeluaran, seperti:
+### Backend
 
-- Makanan
-- Transportasi
-- Internet
-- Kebutuhan kuliah
-- Hiburan
-- Lainnya
+- Node.js
+- NestJS
+- TypeScript
+- class-validator
+- class-transformer
 
-## Halaman Aplikasi
+## Fitur Aplikasi
 
-Project ini memiliki tiga halaman utama:
-
-1. `index.html`
-   - Menampilkan daftar pengeluaran.
-   - Menggunakan tabel untuk menampilkan data.
-
-2. `tambah.html`
-   - Menampilkan form untuk menambahkan pengeluaran.
-   - Menggunakan input, select, textarea, label, dan button.
-
-3. `detail.html`
-   - Menampilkan informasi detail dari sebuah pengeluaran.
+- Menampilkan daftar pengeluaran mahasiswa.
+- Menambahkan data pengeluaran.
+- Mengubah data pengeluaran.
+- Menghapus data pengeluaran.
+- Menampilkan ringkasan total pengeluaran.
+- Memvalidasi data sebelum disimpan.
+- Menghubungkan frontend dengan backend melalui REST API.
 
 ## Struktur Project
 
 ```text
-aplikasi-manajemen-pengeluaran-mahasiswa/
+Continue WEB Tugas/
 │
-├── index.html
-├── tambah.html
-├── detail.html
+├── kantongku-react/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── package.json
+│   └── README.md
 │
-├── assets/
-│   └── images/
-│       └── logo.svg
-│
-├── docs/
-│   └── screenshots/
-│       ├── halaman-utama.png
-│       ├── halaman-tambah.png
-│       └── halaman-detail.png
+├── kantongku-backend/
+│   ├── src/
+│   │   ├── pengeluaran/
+│   │   │   ├── dto/
+│   │   │   ├── entities/
+│   │   │   ├── pengeluaran.controller.ts
+│   │   │   ├── pengeluaran.service.ts
+│   │   │   └── pengeluaran.module.ts
+│   │   ├── app.module.ts
+│   │   └── main.ts
+│   ├── SS/
+│   ├── pengeluaran.http
+│   └── package.json
 │
 └── README.md
+```
 
+## BAB 9 — NestJS Dasar dan Struktur MVC
 
-## Bab 3 - CSS
+Pada tahap BAB 9, aplikasi dikembangkan menggunakan NestJS sebagai backend dan React sebagai frontend. Backend menyediakan REST API untuk mengelola data pengeluaran.
 
-Pada tahap Bab 3, project dikembangkan menggunakan CSS native
-untuk meningkatkan tampilan dan pengalaman pengguna.
+### Struktur Data Pengeluaran
 
-### Penerapan CSS
+Data pengeluaran memiliki beberapa atribut:
 
-Beberapa penerapan CSS yang digunakan:
+- `id`: identitas pengeluaran.
+- `nama`: nama pengeluaran.
+- `kategori`: kategori pengeluaran.
+- `tanggal`: tanggal transaksi.
+- `jumlah`: nominal pengeluaran.
+- `keterangan`: informasi tambahan.
 
-- Font family, font size, dan font weight
-- Styling navigasi
-- Styling list
-- Text alignment
-- Warna background dan teks
-- Styling tabel
-- Styling form
-- Styling button
-- Styling kategori pengeluaran
-- Responsive design menggunakan `@media`
+### REST API
 
-### Responsive Design
+| Method | Endpoint           | Fungsi                        |
+| ------ | ------------------ | ----------------------------- |
+| GET    | `/pengeluaran`     | Mengambil semua data          |
+| GET    | `/pengeluaran/:id` | Mengambil data berdasarkan ID |
+| POST   | `/pengeluaran`     | Menambahkan data              |
+| PATCH  | `/pengeluaran/:id` | Mengubah data                 |
+| DELETE | `/pengeluaran/:id` | Menghapus data                |
 
-Responsive design diterapkan menggunakan media query pada ukuran
-layar maksimal 768px.
+### Validasi dan Penanganan Error
 
-Pada tampilan desktop, navigasi ditampilkan secara horizontal.
-Pada tampilan mobile, navigasi berubah menjadi vertikal agar
-lebih mudah digunakan pada layar kecil.
+Validasi data diterapkan menggunakan `class-validator` dan `ValidationPipe`.
 
-### Screenshot Desktop
+Beberapa aturan validasi:
 
-#### Halaman Utama
+- Nama harus berupa teks dan minimal dua karakter.
+- Kategori harus sesuai pilihan yang tersedia.
+- Tanggal harus menggunakan format tanggal yang valid.
+- Jumlah harus berupa angka lebih dari nol.
 
-![alt text](image.png)
+Penanganan error menggunakan exception NestJS, termasuk `NotFoundException` ketika data dengan ID tertentu tidak ditemukan.
 
-#### Halaman Tambah
+### Integrasi Frontend dan Backend
 
-![alt text](tambah.png)
+Frontend React terhubung ke backend NestJS menggunakan Fetch API.
 
-#### Halaman Detail
+Fitur tambah, tampil, edit, dan hapus data telah diuji melalui aplikasi.
 
-![alt text](detail.png)
+### Pengujian API
 
-### Screenshot Mobile
+Pengujian dilakukan menggunakan REST Client di Visual Studio Code.
 
-![alt text](mobile.png)
+Bukti pengujian tersedia pada folder `kantongku-backend/SS/`, meliputi:
 
+1. POST — Tambah pengeluaran.
+2. GET — Ambil semua pengeluaran.
+3. GET — Ambil pengeluaran berdasarkan ID.
+4. PATCH — Ubah pengeluaran.
+5. DELETE — Hapus pengeluaran.
+6. Error — Mencari ID yang tidak tersedia.
+7. Error — Mengirim jumlah yang tidak valid.
+
+## Cara Menjalankan Project
+
+### 1. Menjalankan Backend
+
+Buka terminal pada folder `kantongku-backend`, kemudian jalankan:
+
+```bash
+npm install
+npm run start:dev
+```
+
+Backend berjalan pada:
+
+```text
+http://localhost:3000
+```
+
+### 2. Menjalankan Frontend
+
+Buka terminal baru pada folder `kantongku-react`, kemudian jalankan:
+
+```bash
+npm install
+npm run dev
+```
+
+Frontend berjalan pada:
+
+```text
+http://localhost:5173
+```
+
+Pastikan backend dan frontend berjalan bersamaan agar integrasi API dapat digunakan.
+
+## Catatan
+
+Backend pada tahap ini menggunakan penyimpanan data sementara di dalam memori (in-memory array). Data akan kembali kosong ketika server backend dimulai ulang.
+
+## Pengembang
+
+Proyek KantongKu dikembangkan sebagai bagian dari tugas perkuliahan Rekayasa Perangkat Lunak, Telkom University.
