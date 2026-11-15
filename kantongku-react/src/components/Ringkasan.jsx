@@ -1,6 +1,5 @@
-
 function Ringkasan({ data }) {
-  const total = data.reduce((jumlah, item) => jumlah + item.nominal, 0);
+  const total = data.reduce((jumlah, item) => jumlah + Number(item.jumlah), 0);
 
   return (
     <div className="row mb-4">

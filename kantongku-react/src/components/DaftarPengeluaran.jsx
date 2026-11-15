@@ -1,7 +1,6 @@
-
 import KartuPengeluaran from "./KartuPengeluaran";
 
-function DaftarPengeluaran({ data, hapusData }) {
+function DaftarPengeluaran({ data, hapusData, editData }) {
   return (
     <div className="card mb-4">
       <div className="card-body">
@@ -26,6 +25,7 @@ function DaftarPengeluaran({ data, hapusData }) {
                     key={item.id}
                     item={item}
                     hapusData={hapusData}
+                    editData={editData}
                   />
                 ))}
               </tbody>

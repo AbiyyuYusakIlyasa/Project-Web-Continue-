@@ -1,0 +1,44 @@
+
+### 1. POST - Tambah pengeluaran
+POST http://localhost:3000/pengeluaran
+Content-Type: application/json
+
+{
+  "nama": "Makan siang",
+  "kategori": "Makanan",
+  "tanggal": "2026-11-15",
+  "jumlah": 25000,
+  "keterangan": "Makan di kantin kampus"
+}
+
+### 2. GET - Ambil semua pengeluaran
+GET http://localhost:3000/pengeluaran
+
+### 3. GET - Ambil pengeluaran berdasarkan ID
+GET http://localhost:3000/pengeluaran/15
+
+### 4. PATCH - Ubah pengeluaran
+PATCH http://localhost:3000/pengeluaran/15
+Content-Type: application/json
+
+{
+  "nama": "Makan siang dan minum",
+  "jumlah": 30000
+}
+
+### 5. DELETE - Hapus pengeluaran
+DELETE http://localhost:3000/pengeluaran/15
+
+### 6. Error - Cari ID yang tidak tersedia
+GET http://localhost:3000/pengeluaran/999
+
+### 7. Error - Kirim jumlah yang tidak valid
+POST http://localhost:3000/pengeluaran
+Content-Type: application/json
+
+{
+  "nama": "Makan malam",
+  "kategori": "Makanan",
+  "tanggal": "2026-11-15",
+  "jumlah": -5000
+}
